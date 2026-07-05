@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Fall from "@/components/Fall";
 import { HomeHero } from "@/components/home-hero";
 import { MetricStrip } from "@/components/metric-strip";
-import { ProgramSpotlight } from "@/components/program-spotlight";
 import { SectionHeading } from "@/components/section-heading";
 import { Surface } from "@/components/surface";
 import { activities, pillars } from "@/lib/site";
 import { getFeaturedGalleryAssets, getGalleryAssets } from "@/lib/gallery";
+import programHero from "@/gallery/bg-malay.png";
 
 export default async function HomePage() {
   const galleryAssets = await getGalleryAssets();
@@ -146,11 +147,36 @@ export default async function HomePage() {
 
       <section className="mx-auto w-full max-w-[1600px] px-4 pb-16 sm:px-6 lg:px-8">
         <div className="grid gap-5">
-          <SectionHeading
-            eyebrow="Programs"
-            title="Programs continue the same story, chapter by chapter."
-          />
-          <ProgramSpotlight activities={featuredActivities} visuals={featuredVisuals.slice(1, 5)} />
+          <SectionHeading eyebrow="Programs" title="Empowering Youth. Inspiring Change." />
+          <Surface className="overflow-hidden p-0">
+            <section className="relative h-screen w-full overflow-clip">
+              <Image
+                src={programHero}
+                alt="Programs hero"
+                fill
+                sizes="100vw"
+                className="object-cover"
+                priority={false}
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08),rgba(0,0,0,0.2)_24%,rgba(0,0,0,0.45)),radial-gradient(circle_at_18%_28%,rgba(0,0,0,0.32),transparent_46%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.14),transparent_30%)]" />
+              <div className="absolute inset-0 flex items-start justify-start px-6 pt-[clamp(6.5rem,34vh,20rem)] sm:px-10 lg:px-16 xl:px-20">
+                <Fall>
+                  <h3 className="font-display whitespace-nowrap text-left text-[clamp(2.6rem,5.6vw,7.25rem)] font-medium leading-none tracking-[-0.11em] text-white" style={{ textShadow: "0 2px 24px rgba(0,0,0,0.18)" }}>
+                    تمكين الشباب. إلهام التغيير.
+                  </h3>
+                </Fall>
+              </div>
+            </section>
+
+            <section className="flex min-h-screen w-full items-center justify-center overflow-clip px-6 py-16">
+              <Fall color="#005E53">
+                <h4 className="mx-auto w-full max-w-4xl text-center text-[clamp(1.9rem,4.8vw,4.5rem)] leading-none tracking-tight">
+                  Join us in empowering the next generation to lead with purpose, serve with compassion, and create lasting impact across our communities.
+                </h4>
+              </Fall>
+            </section>
+          </Surface>
         </div>
       </section>
     </>
