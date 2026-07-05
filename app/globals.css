@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #d8b45f;
+  --accent-strong: #7fd1c1;
+  --page: #050607;
+  --page-soft: #0b1011;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-strong: rgba(255, 255, 255, 0.085);
+  --text: rgba(255, 255, 255, 0.965);
+  --muted: rgba(255, 255, 255, 0.66);
+  --line: rgba(255, 255, 255, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "SF Pro Display",
+    "SF Pro Text",
+    Inter,
+    "Segoe UI",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(216, 180, 95, 0.14), transparent 24%),
+    radial-gradient(circle at 82% 12%, rgba(127, 209, 193, 0.12), transparent 22%),
+    radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.05), transparent 28%),
+    linear-gradient(180deg, #0b1012 0%, #050607 42%, #040506 100%);
+  color: var(--text);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(141, 84, 255, 0.36);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.grain {
+  position: relative;
+  isolation: isolate;
+}
+
+.grain::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.08), transparent 42%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 92%);
+  opacity: 0.18;
+  z-index: -1;
+}
+
+.ring-soft {
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.page-shell {
+  position: relative;
+}
+
+.font-display {
+  font-family:
+    ui-serif,
+    Georgia,
+    Cambria,
+    "Times New Roman",
+    Times,
+    serif;
+}
+
+.glass-surface {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0.032)),
+    rgba(255, 255, 255, 0.038);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(24px);
+  box-shadow:
+    0 24px 90px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.section-spacing {
+  padding-top: clamp(4.5rem, 7vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 7vw, 7.5rem);
+}
+
+.section-spacing-tight {
+  padding-top: clamp(3rem, 5vw, 5rem);
+  padding-bottom: clamp(3rem, 5vw, 5rem);
+}
+
+.page-shell::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(255, 255, 255, 0.06), transparent 32%),
+    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.16));
+  z-index: -2;
+}
