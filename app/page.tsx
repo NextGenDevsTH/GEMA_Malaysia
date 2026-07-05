@@ -149,7 +149,6 @@ export default async function HomePage() {
           <SectionHeading
             eyebrow="Programs"
             title="Programs continue the same story, chapter by chapter."
-            description="Hover or move through the list to shift the visual stage. The section is built to feel like an editorial index, not a set of independent cards."
           />
           <ProgramSpotlight activities={featuredActivities} visuals={featuredVisuals.slice(1, 5)} />
         </div>

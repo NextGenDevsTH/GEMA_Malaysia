@@ -193,79 +193,27 @@ export function HomeHero({ heroImage, supportingImages = [] }: HomeHeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute inset-x-0 bottom-0 grid gap-4 p-4 sm:p-6"
+              className="absolute bottom-10 right-10 z-10 sm:bottom-12 sm:right-12 lg:bottom-14 lg:right-14"
             >
-              <div className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
-                <div className="relative min-h-[18rem] overflow-hidden rounded-[34px] border border-white/10 bg-black/22">
-                  {supportOne ? (
-                    <motion.div
-                      initial={reduceMotion ? false : { scale: 1.04 }}
-                      animate={reduceMotion ? undefined : { scale: 1 }}
-                      transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                      className="absolute inset-0"
-                    >
-                      <Image
-                        src={supportOne.urlPath}
-                        alt={supportOne.title}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 34vw"
-                        className="object-cover"
-                        style={{ objectPosition: supportOne.objectPosition }}
-                      />
-                    </motion.div>
-                  ) : null}
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.04),_rgba(0,0,0,0.62))]" />
-                  <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-                    <p className="text-[11px] uppercase tracking-[0.32em] text-white/44">Community</p>
-                    <p className="mt-2 max-w-xl text-lg leading-8 text-white/88">
-                      Volunteers, families, and members gathering around real work, not brand theater.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="grid gap-4">
-                  <div className="relative min-h-[8.5rem] overflow-hidden rounded-[30px] border border-white/10 bg-black/22">
-                    {supportTwo ? (
-                      <motion.div
-                        initial={reduceMotion ? false : { scale: 1.04 }}
-                        animate={reduceMotion ? undefined : { scale: 1 }}
-                        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                        className="absolute inset-0"
-                      >
-                        <Image
-                          src={supportTwo.urlPath}
-                          alt={supportTwo.title}
-                          fill
-                          sizes="(max-width: 1024px) 100vw, 18vw"
-                          className="object-cover"
-                          style={{ objectPosition: supportTwo.objectPosition }}
-                        />
-                      </motion.div>
-                    ) : null}
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.02),_rgba(0,0,0,0.6))]" />
-                    <div className="absolute inset-x-0 bottom-0 p-4">
-                      <p className="text-[11px] uppercase tracking-[0.32em] text-white/44">Leadership</p>
-                      <p className="mt-2 text-sm leading-6 text-white/84">Faces, presence, and responsibility.</p>
-                    </div>
-                  </div>
-
-                  <div className="rounded-[30px] border border-white/10 bg-black/22 p-5 backdrop-blur-xl">
-                    <p className="text-[11px] uppercase tracking-[0.32em] text-white/44">Movement pulse</p>
-                    <p className="mt-3 text-sm leading-7 text-white/74">
-                      A national youth movement becomes tangible when you can see people serving together, not just
-                      read about them in a block of interface copy.
-                    </p>
-                    <div className="mt-4 flex items-center justify-between gap-4 border-t border-white/8 pt-4">
-                      <p className="text-[11px] uppercase tracking-[0.28em] text-white/38">Open membership</p>
-                      <MagneticLink
-                        href={site.registerUrl}
-                        className="rounded-full bg-white/8 px-4 py-2 text-sm font-medium text-white/88 transition hover:bg-white/12"
-                      >
-                        Open membership flow
-                      </MagneticLink>
-                    </div>
-                  </div>
-                </div>
+              <div className="relative aspect-[24/9] min-h-[6rem] overflow-hidden rounded-[28px] border border-white/10 bg-black/22 sm:min-h-[7rem] lg:min-h-[8rem]">
+                {supportTwo ? (
+                  <motion.div
+                    initial={reduceMotion ? false : { scale: 1.04 }}
+                    animate={reduceMotion ? undefined : { scale: 1 }}
+                    transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src={supportTwo.urlPath}
+                      alt={supportTwo.title}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 22vw"
+                      className="object-contain bg-black"
+                      style={{ objectPosition: supportTwo.objectPosition }}
+                    />
+                  </motion.div>
+                ) : null}
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.02),_rgba(0,0,0,0.48))]" />
               </div>
             </motion.div>
 
