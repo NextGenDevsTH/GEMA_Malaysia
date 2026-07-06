@@ -55,7 +55,7 @@ export default async function HomePage() {
                 <h2 className="mt-4 max-w-3xl font-display text-[clamp(2.4rem,5vw,5rem)] font-semibold leading-[0.9] tracking-[-0.085em] text-white">
                   The movement is defined by people, not by interface.
                 </h2>
-                <p className="mt-6 max-w-2xl text-base leading-8 text-white/64 sm:text-lg">
+                <p className="mt-6 max-w-2xl text-base leading-8 text-white sm:text-lg">
                   Youth chapters, volunteers, and community work should feel visible at a glance. This section keeps
                   the narrative grounded in faces, gatherings, and the public record of the organisation’s work.
                 </p>
@@ -68,14 +68,14 @@ export default async function HomePage() {
                       ["Accountability", "The archive stays visible, specific, and real."],
                     ].map(([label, text]) => (
                       <div key={label} className="grid gap-2 border-b border-white/8 pb-4 last:border-b-0 last:pb-0">
-                        <p className="text-[11px] uppercase tracking-[0.34em] text-white/42">{label}</p>
-                        <p className="max-w-xl text-sm leading-7 text-white/68">{text}</p>
+                        <p className="text-[11px] uppercase tracking-[0.34em] text-white">{label}</p>
+                        <p className="max-w-xl text-sm leading-7 text-white">{text}</p>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <p className="mt-8 max-w-xl text-[11px] uppercase tracking-[0.3em] text-white/36">
+                <p className="mt-8 max-w-xl text-[11px] uppercase tracking-[0.3em] text-white">
                   Visible in the archive, active in the field, accountable in public.
                 </p>
               </div>
@@ -121,8 +121,8 @@ export default async function HomePage() {
                       ) : null}
                       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.02),rgba(0,0,0,0.58))]" />
                       <div className="absolute inset-x-0 bottom-0 p-5">
-                        <p className="text-[11px] uppercase tracking-[0.32em] text-white/44">Community</p>
-                        <p className="mt-2 text-sm leading-6 text-white/84">
+                        <p className="text-[11px] uppercase tracking-[0.32em] text-white">Community</p>
+                        <p className="mt-2 text-sm leading-6 text-white">
                           Families, members, and volunteers sharing the same space.
                         </p>
                       </div>
@@ -140,8 +140,8 @@ export default async function HomePage() {
                       ) : null}
                       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.02),rgba(0,0,0,0.62))]" />
                       <div className="absolute inset-x-0 bottom-0 p-5">
-                        <p className="text-[11px] uppercase tracking-[0.32em] text-white/44">Leadership</p>
-                        <p className="mt-2 text-sm leading-6 text-white/84">
+                        <p className="text-[11px] uppercase tracking-[0.32em] text-white">Leadership</p>
+                        <p className="mt-2 text-sm leading-6 text-white">
                           Responsibility becomes visible when people step forward together.
                         </p>
                       </div>
@@ -160,7 +160,7 @@ export default async function HomePage() {
 
       <section className="mx-auto w-full max-w-[1600px] px-4 pb-16 sm:px-6 lg:px-8">
         <div className="grid gap-5">
-          <SectionHeading title="Empowering Youth. Inspiring Change." />
+          <SectionHeading title="Empowering Youth. Inspiring Change." titleClassName="text-[#1a1a1a]" />
           <Surface className="overflow-hidden p-0">
             <section className="relative h-screen w-full overflow-clip">
               <Image
@@ -188,7 +188,7 @@ export default async function HomePage() {
                 <PurposeMark />
                 <Fall color="#005E53">
                   <div>
-                    <p className="mb-5 text-xs uppercase text-white/42">Join the movement</p>
+                    <p className="mb-5 text-xs uppercase text-white">Join the movement</p>
                     <h4 className="mx-auto max-w-3xl font-display text-5xl font-medium leading-[0.95] text-white sm:text-6xl lg:text-7xl">
                       Lead with purpose. Serve with heart.
                     </h4>

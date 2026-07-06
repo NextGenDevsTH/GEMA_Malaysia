@@ -9,8 +9,8 @@
   --page-soft: #fafafa;
   --surface: rgba(35, 22, 62, 0.72);
   --surface-strong: rgba(52, 33, 92, 0.9);
-  --text: #1a1a1a;
-  --muted: rgba(26, 26, 26, 0.66);
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.66);
   --line: rgba(141, 84, 255, 0.16);
 }
 

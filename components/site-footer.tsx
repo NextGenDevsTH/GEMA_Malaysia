@@ -35,7 +35,7 @@ export function SiteFooter() {
               </MagneticLink>
               <MagneticLink
                 href="/contact"
-                className="rounded-full border border-white/10 bg-white/6 px-5 py-3 text-sm text-white/84 transition hover:bg-white/10"
+                className="rounded-full border border-white/10 bg-white/6 px-5 py-3 text-sm text-white transition hover:bg-white/10"
               >
                 Contact
               </MagneticLink>
@@ -43,22 +43,22 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="text-[11px] uppercase tracking-[0.32em] text-white/42">Contact</p>
+            <p className="text-[11px] uppercase tracking-[0.32em] text-white">Contact</p>
             <div className="mt-4 grid gap-2">
               {contactPoints.map((item) => (
                 <div key={item.label} className="rounded-[24px] border border-white/10 bg-black/20 p-4">
-                  <p className="text-sm text-white/82">{item.label}</p>
-                  <p className="mt-1 text-sm text-white/58">{item.value}</p>
+                  <p className="text-sm text-white">{item.label}</p>
+                  <p className="mt-1 text-sm text-white">{item.value}</p>
                 </div>
               ))}
             </div>
           </div>
 
           <div>
-            <p className="text-[11px] uppercase tracking-[0.32em] text-white/42">Quick Links</p>
+            <p className="text-[11px] uppercase tracking-[0.32em] text-white">Quick Links</p>
             <div className="mt-4 grid gap-2">
               {pages.slice(0, 8).map((page) => (
-                <Link key={page.href} href={page.href} className="rounded-2xl px-3 py-2 text-sm text-white/68 transition hover:bg-white/8 hover:text-white">
+                <Link key={page.href} href={page.href} className="rounded-2xl px-3 py-2 text-sm text-white transition hover:bg-white/8 hover:text-white">
                   {page.label}
                 </Link>
               ))}
@@ -66,7 +66,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="text-[11px] uppercase tracking-[0.32em] text-white/42">Official Paths</p>
+            <p className="text-[11px] uppercase tracking-[0.32em] text-white">Official Paths</p>
             <div className="mt-4 grid gap-2">
               {socialLinks.map((link) => (
                 <Link
@@ -74,12 +74,12 @@ export function SiteFooter() {
                   href={link.href}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-                  className="rounded-2xl px-3 py-2 text-sm text-white/68 transition hover:bg-white/8 hover:text-white"
+                  className="rounded-2xl px-3 py-2 text-sm text-white transition hover:bg-white/8 hover:text-white"
                 >
                   {link.label}
                 </Link>
               ))}
-              <Link href="/privacy-policy" className="rounded-2xl px-3 py-2 text-sm text-white/68 transition hover:bg-white/8 hover:text-white">
+              <Link href="/privacy-policy" className="rounded-2xl px-3 py-2 text-sm text-white transition hover:bg-white/8 hover:text-white">
                 Privacy Policy
               </Link>
             </div>

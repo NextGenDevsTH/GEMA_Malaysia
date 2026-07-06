@@ -155,13 +155,13 @@ export function ActivityExplorer({ activities }: ActivityExplorerProps) {
             </motion.article>
           ))
         ) : (
-          <div className="rounded-[28px] border border-[#ded5f3] bg-white p-8 text-sm text-[#4a4a4a] shadow-[0_18px_48px_rgba(91,61,150,0.12)]">
+          <div className="rounded-[28px] border border-[#ded5f3] bg-white p-8 text-sm text-white shadow-[0_18px_48px_rgba(91,61,150,0.12)]">
             No activities match the current filters.
           </div>
         )}
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[rgba(141,84,255,0.18)] pt-5 text-sm text-[#4a4a4a]">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[rgba(141,84,255,0.18)] pt-5 text-sm text-white">
         <p>
           Showing {visible.length} of {filtered.length} items
         </p>

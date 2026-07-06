@@ -7,9 +7,10 @@ type SectionHeadingProps = {
   eyebrow?: string;
   title: string;
   description?: string;
+  titleClassName?: string;
 };
 
-export function SectionHeading({ eyebrow, title, description }: SectionHeadingProps) {
+export function SectionHeading({ eyebrow, title, description, titleClassName }: SectionHeadingProps) {
   const reduceMotion = useReducedMotion();
   const words = title.split(" ");
 
@@ -24,7 +25,8 @@ export function SectionHeading({ eyebrow, title, description }: SectionHeadingPr
         <h2
           className={[
             eyebrow ? "mt-4" : "",
-            "text-[clamp(2.25rem,4vw,4.45rem)] font-semibold leading-[0.96] tracking-[-0.075em] text-[#1a1a1a]",
+            "text-[clamp(2.25rem,4vw,4.45rem)] font-semibold leading-[0.96] tracking-[-0.075em]",
+            titleClassName ?? "text-white",
           ].join(" ")}
         >
           {reduceMotion
@@ -45,7 +47,7 @@ export function SectionHeading({ eyebrow, title, description }: SectionHeadingPr
       </Reveal>
       {description ? (
         <Reveal delay={0.1}>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-[#4a4a4a] sm:text-[15px]">{description}</p>
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-white sm:text-[15px]">{description}</p>
         </Reveal>
       ) : null}
     </div>

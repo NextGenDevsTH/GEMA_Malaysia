@@ -85,7 +85,7 @@ export function HomeHero({ heroImage, supportingImages = [] }: HomeHeroProps) {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.76, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-6 max-w-2xl text-pretty text-base leading-8 text-white/66 sm:text-[15px]"
+              className="mt-6 max-w-2xl text-pretty text-base leading-8 text-white sm:text-[15px]"
             >
               Pertubuhan Pemuda GEMA Malaysia brings leadership, volunteerism, education, community, environment,
               sports, and humanitarian action into one national youth movement.
@@ -107,7 +107,7 @@ export function HomeHero({ heroImage, supportingImages = [] }: HomeHeroProps) {
               </MagneticLink>
               <MagneticLink
                 href="/gallery"
-                className="rounded-full border border-white/12 bg-white/6 px-6 py-3 text-sm text-white/84 transition duration-300 hover:border-white/20 hover:bg-white/10"
+                className="rounded-full border border-white/12 bg-white/6 px-6 py-3 text-sm text-white transition duration-300 hover:border-white/20 hover:bg-white/10"
               >
                 View gallery
               </MagneticLink>
@@ -130,8 +130,8 @@ export function HomeHero({ heroImage, supportingImages = [] }: HomeHeroProps) {
             transition={{ duration: 0.7, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-2xl rounded-[28px] border border-white/10 bg-black/24 p-5 backdrop-blur-xl"
           >
-            <p className="text-[11px] uppercase tracking-[0.34em] text-white/42">Movement note</p>
-            <p className="mt-3 text-lg leading-8 text-white/86 sm:text-xl">
+            <p className="text-[11px] uppercase tracking-[0.34em] text-white">Movement note</p>
+            <p className="mt-3 text-lg leading-8 text-white sm:text-xl">
               Young people standing together. Communities built through service. Leadership made visible in the
               streets, halls, and gathering spaces where the work actually happens.
             </p>
@@ -184,10 +184,10 @@ export function HomeHero({ heroImage, supportingImages = [] }: HomeHeroProps) {
             >
               <div className="flex items-center justify-between gap-4 rounded-full border border-white/10 bg-black/20 px-4 py-3 backdrop-blur-xl">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.32em] text-white/42">Editorial sequence</p>
-                  <p className="mt-1 text-sm text-white/88">Leadership, community, and service in motion</p>
+                  <p className="text-[10px] uppercase tracking-[0.32em] text-white">Editorial sequence</p>
+                  <p className="mt-1 text-sm text-white">Leadership, community, and service in motion</p>
                 </div>
-                <p className="max-w-[16rem] text-right text-xs leading-5 text-white/58">Real GEMA photography, arranged as a public story.</p>
+                <p className="max-w-[16rem] text-right text-xs leading-5 text-white">Real GEMA photography, arranged as a public story.</p>
               </div>
             </motion.div>
 
