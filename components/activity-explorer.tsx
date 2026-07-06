@@ -113,10 +113,10 @@ export function ActivityExplorer({ activities }: ActivityExplorerProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.05 }}
-              className="overflow-hidden rounded-[30px] border border-white/10 bg-white/6 shadow-soft"
+              className="overflow-hidden rounded-[30px] border border-white/10 bg-[#1b1130] shadow-soft"
             >
               <div className="grid gap-0 lg:grid-cols-[1fr_1.2fr]">
-                <div className="flex min-h-[220px] flex-col justify-between bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.26),_rgba(17,17,20,0.1)_52%),linear-gradient(180deg,_rgba(255,255,255,0.08),_rgba(255,255,255,0.03))] p-6">
+                <div className="flex min-h-[220px] flex-col justify-between bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.3),_rgba(17,17,20,0.12)_52%),linear-gradient(180deg,_rgba(255,255,255,0.08),_rgba(255,255,255,0.03))] p-6">
                   <div className="flex items-center justify-between gap-4">
                     <Chip active>{item.category}</Chip>
                     <span className="text-xs uppercase tracking-[0.24em] text-white/42">{item.state}</span>
@@ -155,13 +155,13 @@ export function ActivityExplorer({ activities }: ActivityExplorerProps) {
             </motion.article>
           ))
         ) : (
-          <div className="rounded-[28px] border border-white/10 bg-white/6 p-8 text-sm text-white/64">
+          <div className="rounded-[28px] border border-[#ded5f3] bg-white p-8 text-sm text-[#4a4a4a] shadow-[0_18px_48px_rgba(91,61,150,0.12)]">
             No activities match the current filters.
           </div>
         )}
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/8 pt-5 text-sm text-white/60">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[rgba(141,84,255,0.18)] pt-5 text-sm text-[#4a4a4a]">
         <p>
           Showing {visible.length} of {filtered.length} items
         </p>
@@ -169,18 +169,18 @@ export function ActivityExplorer({ activities }: ActivityExplorerProps) {
           <button
             type="button"
             onClick={() => setPage((current) => Math.max(1, current - 1))}
-            className="rounded-full border border-white/10 bg-white/6 px-4 py-2 text-white/78 transition hover:bg-white/10 disabled:opacity-40"
+            className="rounded-full border border-[#d9cff0] bg-white px-4 py-2 text-[#5f35b5] transition hover:bg-[#f3efff] disabled:opacity-40"
             disabled={currentPage === 1}
           >
             Prev
           </button>
-          <span className="rounded-full border border-white/10 bg-black/30 px-4 py-2 text-white/74">
+          <span className="rounded-full border border-[#d9cff0] bg-[#f7f3ff] px-4 py-2 text-[#3d245f]">
             {currentPage} / {totalPages}
           </span>
           <button
             type="button"
             onClick={() => setPage((current) => Math.min(totalPages, current + 1))}
-            className="rounded-full border border-white/10 bg-white/6 px-4 py-2 text-white/78 transition hover:bg-white/10 disabled:opacity-40"
+            className="rounded-full border border-[#d9cff0] bg-white px-4 py-2 text-[#5f35b5] transition hover:bg-[#f3efff] disabled:opacity-40"
             disabled={currentPage === totalPages}
           >
             Next

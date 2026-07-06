@@ -17,14 +17,14 @@ export function SectionHeading({ eyebrow, title, description }: SectionHeadingPr
     <div className="max-w-3xl">
       {eyebrow ? (
         <Reveal>
-          <p className="text-[11px] uppercase tracking-[0.42em] text-white/44">{eyebrow}</p>
+          <p className="text-[11px] uppercase tracking-[0.42em] text-[#5f35b5]">{eyebrow}</p>
         </Reveal>
       ) : null}
       <Reveal delay={0.05}>
         <h2
           className={[
             eyebrow ? "mt-4" : "",
-            "text-[clamp(2.25rem,4vw,4.45rem)] font-semibold leading-[0.96] tracking-[-0.075em] text-white",
+            "text-[clamp(2.25rem,4vw,4.45rem)] font-semibold leading-[0.96] tracking-[-0.075em] text-[#1a1a1a]",
           ].join(" ")}
         >
           {reduceMotion
@@ -45,7 +45,7 @@ export function SectionHeading({ eyebrow, title, description }: SectionHeadingPr
       </Reveal>
       {description ? (
         <Reveal delay={0.1}>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-white/62 sm:text-[15px]">{description}</p>
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-[#4a4a4a] sm:text-[15px]">{description}</p>
         </Reveal>
       ) : null}
     </div>

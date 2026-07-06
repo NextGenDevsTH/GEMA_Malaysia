@@ -200,7 +200,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section id="agents" className="border-t border-white/[0.08] px-6 py-32 md:px-12 lg:px-20">
+      <section id="agents" className="border-t border-white/[0.08] bg-[#111114] px-6 py-32 md:px-12 lg:px-20">
         <div className="mx-auto max-w-6xl">
           <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
             <div>

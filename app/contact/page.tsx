@@ -68,7 +68,7 @@ export default function ContactPage() {
             <Link href={site.registerUrl} target="_blank" rel="noreferrer" className="rounded-full bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))] px-5 py-3 text-sm font-semibold text-[#ffffff]">
               Join GEMA
             </Link>
-            <Link href={site.registerUrl} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-white/6 px-5 py-3 text-sm text-white/84">
+            <Link href={site.registerUrl} target="_blank" rel="noreferrer" className="rounded-full border border-[#d9cff0] bg-white px-5 py-3 text-sm font-semibold text-[#5f35b5] shadow-[0_10px_28px_rgba(91,61,150,0.12)] transition hover:bg-[#f3efff]">
               Register
             </Link>
           </div>
