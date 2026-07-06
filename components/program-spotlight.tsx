@@ -84,9 +84,6 @@ export function ProgramSpotlight({ activities, visuals }: ProgramSpotlightProps)
       </div>
 
       <div className="grid gap-0 overflow-hidden rounded-[36px] border border-white/10 bg-black/14 shadow-soft">
-        <div className="border-b border-white/8 px-5 py-4 sm:px-6 sm:py-5">
-          <p className="text-[11px] uppercase tracking-[0.34em] text-white/42">Programs</p>
-        </div>
         {activities.map((activity, index) => (
           <SpotlightItem
             key={activity.slug}

@@ -4,7 +4,7 @@ import { Reveal } from "@/components/reveal";
 import { motion, useReducedMotion } from "framer-motion";
 
 type SectionHeadingProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description?: string;
 };
@@ -15,11 +15,18 @@ export function SectionHeading({ eyebrow, title, description }: SectionHeadingPr
 
   return (
     <div className="max-w-3xl">
-      <Reveal>
-        <p className="text-[11px] uppercase tracking-[0.42em] text-white/44">{eyebrow}</p>
-      </Reveal>
+      {eyebrow ? (
+        <Reveal>
+          <p className="text-[11px] uppercase tracking-[0.42em] text-white/44">{eyebrow}</p>
+        </Reveal>
+      ) : null}
       <Reveal delay={0.05}>
-        <h2 className="mt-4 text-[clamp(2.25rem,4vw,4.45rem)] font-semibold leading-[0.96] tracking-[-0.075em] text-white">
+        <h2
+          className={[
+            eyebrow ? "mt-4" : "",
+            "text-[clamp(2.25rem,4vw,4.45rem)] font-semibold leading-[0.96] tracking-[-0.075em] text-white",
+          ].join(" ")}
+        >
           {reduceMotion
             ? title
             : words.map((word, index) => (

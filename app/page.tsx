@@ -1,12 +1,24 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import Fall from "@/components/Fall";
 import { HomeHero } from "@/components/home-hero";
 import { MetricStrip } from "@/components/metric-strip";
+import { PixelIcon } from "@/components/pixel-icon";
+import { RevealText } from "@/components/reveal-text";
 import { SectionHeading } from "@/components/section-heading";
+import { StackingAgentCards } from "@/components/stacking-agent-cards";
 import { Surface } from "@/components/surface";
 import { activities, pillars } from "@/lib/site";
 import { getFeaturedGalleryAssets, getGalleryAssets } from "@/lib/gallery";
 import programHero from "@/gallery/bg-malay.png";
+
+function Tag({ children }: { children: ReactNode }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.05] px-3 py-1 font-sans text-[11px] tracking-widest text-white/55">
+      {children}
+    </span>
+  );
+}
 
 export default async function HomePage() {
   const galleryAssets = await getGalleryAssets();
@@ -147,7 +159,7 @@ export default async function HomePage() {
 
       <section className="mx-auto w-full max-w-[1600px] px-4 pb-16 sm:px-6 lg:px-8">
         <div className="grid gap-5">
-          <SectionHeading eyebrow="Programs" title="Empowering Youth. Inspiring Change." />
+          <SectionHeading title="Empowering Youth. Inspiring Change." />
           <Surface className="overflow-hidden p-0">
             <section className="relative h-screen w-full overflow-clip">
               <Image
@@ -177,6 +189,25 @@ export default async function HomePage() {
               </Fall>
             </section>
           </Surface>
+        </div>
+      </section>
+
+      <section id="agents" className="border-t border-white/[0.08] px-6 py-32 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-16 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+            <div>
+              <PixelIcon type="agents" size={40} />
+              <div className="mt-4"><Tag>PROGRAMS</Tag></div>
+              <RevealText className="mt-5 text-4xl font-light leading-[1.05] tracking-tight text-white md:text-5xl">
+                {"Programmes that turn commitment\ninto action."}
+              </RevealText>
+            </div>
+            <p className="max-w-xs text-sm leading-relaxed text-white/65">
+              Youth leadership programmes, volunteer activities, community outreach initiatives, training & workshops, and social impact projects.
+            </p>
+          </div>
+
+          <StackingAgentCards />
         </div>
       </section>
     </>
