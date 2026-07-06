@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
+import { PurposeMark } from "@/components/compass-mark";
 import Fall from "@/components/Fall";
 import { HomeHero } from "@/components/home-hero";
 import { MetricStrip } from "@/components/metric-strip";
@@ -181,12 +182,19 @@ export default async function HomePage() {
               </div>
             </section>
 
-            <section className="flex min-h-screen w-full items-center justify-center overflow-clip px-6 py-16">
-              <Fall color="#005E53">
-                <h4 className="mx-auto w-full max-w-4xl text-center text-[clamp(1.9rem,4.8vw,4.5rem)] leading-none tracking-tight">
-                  Join us in empowering the next generation to lead with purpose, serve with compassion, and create lasting impact across our communities.
-                </h4>
-              </Fall>
+            <section className="relative flex min-h-screen w-full items-center justify-center overflow-clip px-6 py-16">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(216,180,95,0.11),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.025),transparent_42%,rgba(0,0,0,0.18))]" />
+              <div className="relative mx-auto grid w-full max-w-4xl justify-items-center text-center">
+                <PurposeMark />
+                <Fall color="#005E53">
+                  <div>
+                    <p className="mb-5 text-xs uppercase text-white/42">Join the movement</p>
+                    <h4 className="mx-auto max-w-3xl font-display text-5xl font-medium leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+                      Lead with purpose. Serve with heart.
+                    </h4>
+                  </div>
+                </Fall>
+              </div>
             </section>
           </Surface>
         </div>

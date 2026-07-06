@@ -235,7 +235,7 @@ async function walk(dir: string, base = ""): Promise<GalleryAsset[]> {
 
     const fileStat = await stat(absolute);
     const metadata = galleryMetadata[entry.name] ?? {
-      title: path.basename(entry.name, ext),
+      title: "Gallery Image",
       caption: "Official gallery asset.",
       category: "Archive",
       featured: false,

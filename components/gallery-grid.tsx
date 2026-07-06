@@ -38,7 +38,7 @@ export function GalleryGrid({ assets }: GalleryGridProps) {
             <div className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src={asset.urlPath}
-                alt={asset.name}
+                alt={asset.title}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition duration-700 group-hover:scale-[1.03]"
@@ -47,8 +47,7 @@ export function GalleryGrid({ assets }: GalleryGridProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/6 to-transparent opacity-90" />
             </div>
             <div className="absolute inset-x-0 bottom-0 p-5">
-              <p className="text-[11px] uppercase tracking-[0.28em] text-white/46">{asset.relativePath}</p>
-              <p className="mt-2 text-lg font-medium text-white">{asset.name}</p>
+              <p className="mt-2 text-lg font-medium text-white">{asset.title}</p>
             </div>
           </motion.button>
         ))}
@@ -57,7 +56,7 @@ export function GalleryGrid({ assets }: GalleryGridProps) {
       <AnimatePresence>
         {active ? (
           <motion.div
-            className="fixed inset-0 z-[80] grid place-items-center bg-black/80 p-4 backdrop-blur-xl"
+            className="fixed inset-0 z-[80] grid place-items-center bg-black/78 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -68,13 +67,13 @@ export function GalleryGrid({ assets }: GalleryGridProps) {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.98, y: 10 }}
               transition={{ duration: 0.28 }}
-            className="w-full max-w-5xl overflow-hidden rounded-[32px] border border-white/12 bg-[#0d0d10] shadow-[0_40px_120px_rgba(0,0,0,0.6)]"
+            className="w-full max-w-5xl overflow-hidden rounded-[18px] border border-white/12 bg-black shadow-[0_24px_80px_rgba(0,0,0,0.55)]"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="relative aspect-[16/10] bg-black">
+            <div className="relative h-[78vh] min-h-[360px] bg-black">
               <Image
                   src={active.urlPath}
-                  alt={active.name}
+                  alt={active.title}
                   fill
                   sizes="100vw"
                   className="object-contain"
@@ -84,8 +83,7 @@ export function GalleryGrid({ assets }: GalleryGridProps) {
               <div className="flex items-start justify-between gap-4 p-5">
                 <div>
                   <p className="text-[11px] uppercase tracking-[0.28em] text-white/44">Selected image</p>
-                  <h3 className="mt-2 text-xl font-medium text-white">{active.name}</h3>
-                  <p className="mt-2 text-sm text-white/62">{active.relativePath}</p>
+                  <h3 className="mt-2 text-xl font-medium text-white">{active.title}</h3>
                 </div>
                 <button
                   type="button"
