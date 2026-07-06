@@ -48,7 +48,7 @@ export default async function HomePage() {
       <section className="mx-auto w-full max-w-[1600px] px-4 py-14 sm:px-6 lg:px-8">
         <Surface className="overflow-hidden p-0">
           <div className="relative">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.12),_transparent_32%),radial-gradient(circle_at_80%_18%,_rgba(127,209,193,0.1),_transparent_24%),linear-gradient(180deg,_rgba(255,255,255,0.02),_rgba(0,0,0,0.04))]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.12),_transparent_32%),radial-gradient(circle_at_80%_18%,_rgba(168,123,255,0.1),_transparent_24%),linear-gradient(180deg,_rgba(255,255,255,0.02),_rgba(0,0,0,0.04))]" />
             <div className="relative grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
               <div className="p-6 sm:p-8 lg:p-10">
                 <p className="text-[11px] uppercase tracking-[0.42em] text-white/44">Chapter 01</p>
@@ -93,7 +93,7 @@ export default async function HomePage() {
                         style={{ objectPosition: featuredVisuals[2].objectPosition }}
                       />
                     ) : null}
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.02),rgba(0,0,0,0.7)),radial-gradient(circle_at_top_left,rgba(216,180,95,0.18),transparent_36%)]" />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.02),rgba(0,0,0,0.7)),radial-gradient(circle_at_top_left,rgba(141,84,255,0.18),transparent_36%)]" />
                     <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
                       <div className="max-w-2xl rounded-[30px] border border-white/10 bg-black/26 p-5 backdrop-blur-2xl sm:p-6">
                         <p className="text-[11px] uppercase tracking-[0.34em] text-white/46">Archive lead</p>
@@ -183,7 +183,7 @@ export default async function HomePage() {
             </section>
 
             <section className="relative flex min-h-screen w-full items-center justify-center overflow-clip px-6 py-16">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(216,180,95,0.11),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.025),transparent_42%,rgba(0,0,0,0.18))]" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(141,84,255,0.11),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.025),transparent_42%,rgba(0,0,0,0.18))]" />
               <div className="relative mx-auto grid w-full max-w-4xl justify-items-center text-center">
                 <PurposeMark />
                 <Fall color="#005E53">

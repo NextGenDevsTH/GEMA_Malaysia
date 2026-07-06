@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Chip } from "@/components/chip";
+import { site } from "@/lib/site";
 
 type Activity = {
   slug: string;
@@ -115,7 +116,7 @@ export function ActivityExplorer({ activities }: ActivityExplorerProps) {
               className="overflow-hidden rounded-[30px] border border-white/10 bg-white/6 shadow-soft"
             >
               <div className="grid gap-0 lg:grid-cols-[1fr_1.2fr]">
-                <div className="flex min-h-[220px] flex-col justify-between bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.26),_rgba(17,17,20,0.1)_52%),linear-gradient(180deg,_rgba(255,255,255,0.08),_rgba(255,255,255,0.03))] p-6">
+                <div className="flex min-h-[220px] flex-col justify-between bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.26),_rgba(17,17,20,0.1)_52%),linear-gradient(180deg,_rgba(255,255,255,0.08),_rgba(255,255,255,0.03))] p-6">
                   <div className="flex items-center justify-between gap-4">
                     <Chip active>{item.category}</Chip>
                     <span className="text-xs uppercase tracking-[0.24em] text-white/42">{item.state}</span>
@@ -136,12 +137,14 @@ export function ActivityExplorer({ activities }: ActivityExplorerProps) {
                   <div className="flex flex-wrap items-center gap-3">
                     <Link
                       href={`/activities/${item.slug}`}
-                      className="rounded-full bg-[linear-gradient(135deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))] px-5 py-3 text-sm font-semibold text-[#071013] transition hover:translate-y-[-1px]"
+                      className="rounded-full bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))] px-5 py-3 text-sm font-semibold text-[#ffffff] transition hover:translate-y-[-1px]"
                     >
                       View Detail
                     </Link>
                     <Link
-                      href="/join-us"
+                      href={site.registerUrl}
+                      target="_blank"
+                      rel="noreferrer"
                       className="rounded-full border border-white/10 bg-white/6 px-5 py-3 text-sm text-white/84 transition hover:bg-white/10"
                     >
                       Volunteer

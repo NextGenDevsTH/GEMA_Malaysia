@@ -18,7 +18,7 @@ export default function JoinUsPage() {
     >
       <div className="grid gap-5 xl:grid-cols-[0.94fr_1.06fr]">
         <Surface className="relative overflow-hidden p-8">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.16),_transparent_28%),radial-gradient(circle_at_80%_20%,_rgba(127,209,193,0.12),_transparent_26%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.16),_transparent_28%),radial-gradient(circle_at_80%_20%,_rgba(168,123,255,0.12),_transparent_26%)]" />
           <div className="relative">
             <p className="text-[11px] uppercase tracking-[0.34em] text-white/45">Route</p>
             <p className="mt-4 max-w-sm font-display text-[clamp(2.5rem,4vw,4.4rem)] font-semibold leading-[0.92] tracking-[-0.085em] text-white">
@@ -30,7 +30,7 @@ export default function JoinUsPage() {
             </p>
           </div>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Link href={site.registerUrl} className="rounded-full bg-[linear-gradient(135deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))] px-5 py-3 text-sm font-semibold text-[#071013]">
+            <Link href={site.registerUrl} target="_blank" rel="noreferrer" className="rounded-full bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))] px-5 py-3 text-sm font-semibold text-[#ffffff]">
               Open join button
             </Link>
             <Link href="/" className="rounded-full border border-white/10 bg-white/6 px-5 py-3 text-sm text-white/84">
@@ -48,7 +48,7 @@ export default function JoinUsPage() {
                 ["03", "Complete", "Finish the workflow and submit cleanly."],
               ].map(([step, title, detail]) => (
                 <div key={step} className="grid grid-cols-[72px_0.78fr_1fr] gap-4 px-7 py-6">
-                  <div className="grid place-items-center rounded-[20px] bg-[linear-gradient(135deg,_rgba(216,180,95,0.9),_rgba(127,209,193,0.76))] text-sm font-semibold text-[#071013]">
+                  <div className="grid place-items-center rounded-[20px] bg-[linear-gradient(135deg,_rgba(141,84,255,0.9),_rgba(168,123,255,0.76))] text-sm font-semibold text-[#ffffff]">
                     {step}
                   </div>
                   <div className="self-center">

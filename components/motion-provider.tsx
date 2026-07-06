@@ -55,7 +55,7 @@ export function MotionProvider({ children }: MotionProviderProps) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(216,180,95,0.14),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(127,209,193,0.12),transparent_22%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(141,84,255,0.14),transparent_28%),radial-gradient(circle_at_80%_20%,rgba(168,123,255,0.12),transparent_22%)]" />
           </motion.div>
         ) : null}
       </AnimatePresence>

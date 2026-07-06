@@ -35,15 +35,18 @@ export default function ContactPage() {
 
         <div className="grid gap-5">
           <Surface className="relative overflow-hidden p-8">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.16),_transparent_30%),radial-gradient(circle_at_85%_20%,_rgba(127,209,193,0.14),_transparent_26%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.16),_transparent_30%),radial-gradient(circle_at_85%_20%,_rgba(168,123,255,0.14),_transparent_26%)]" />
             <div className="relative">
               <p className="text-[11px] uppercase tracking-[0.34em] text-white/45">Location</p>
               <div className="mt-6 grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
-                <div className="aspect-[16/11] overflow-hidden rounded-[30px] border border-white/10 bg-[linear-gradient(135deg,_rgba(255,255,255,0.08),_rgba(255,255,255,0.02)),radial-gradient(circle_at_top_left,_rgba(216,180,95,0.24),_rgba(0,0,0,0)_54%)] p-6">
-                  <p className="text-[11px] uppercase tracking-[0.34em] text-white/42">Office map</p>
-                  <p className="mt-4 max-w-sm text-sm leading-7 text-white/66">
-                    Replace this visual block with the verified address and an embedded map once available.
-                  </p>
+                <div className="aspect-[16/11] overflow-hidden rounded-[30px] border border-white/10 bg-white/8">
+                  <iframe
+                    title="GEMA Malaysia Kuala Lumpur map"
+                    src="https://www.google.com/maps?q=Kuala%20Lumpur%2C%20Malaysia&output=embed"
+                    className="h-full w-full"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
                 <div className="grid gap-3">
                   {[
@@ -62,11 +65,11 @@ export default function ContactPage() {
           </Surface>
 
           <div className="flex flex-wrap gap-3">
-            <Link href={site.registerUrl} className="rounded-full bg-[linear-gradient(135deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))] px-5 py-3 text-sm font-semibold text-[#071013]">
+            <Link href={site.registerUrl} target="_blank" rel="noreferrer" className="rounded-full bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))] px-5 py-3 text-sm font-semibold text-[#ffffff]">
               Join GEMA
             </Link>
-            <Link href="/join-us" className="rounded-full border border-white/10 bg-white/6 px-5 py-3 text-sm text-white/84">
-              Join page
+            <Link href={site.registerUrl} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-white/6 px-5 py-3 text-sm text-white/84">
+              Register
             </Link>
           </div>
         </div>

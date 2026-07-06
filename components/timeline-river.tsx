@@ -28,7 +28,7 @@ export function TimelineRiver({ items }: TimelineRiverProps) {
     <div ref={ref} className="relative grid gap-5 lg:grid-cols-[0.42fr_1fr]">
       <div className="lg:sticky lg:top-24 lg:h-[calc(100vh-8rem)]">
         <Surface className="relative h-full overflow-hidden p-7">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(216,180,95,0.14),_transparent_36%),radial-gradient(circle_at_bottom_right,_rgba(127,209,193,0.12),_transparent_32%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(141,84,255,0.14),_transparent_36%),radial-gradient(circle_at_bottom_right,_rgba(168,123,255,0.12),_transparent_32%)]" />
           <div className="relative flex h-full flex-col justify-between">
             <div>
               <p className="text-[11px] uppercase tracking-[0.34em] text-white/45">Progress</p>
@@ -41,7 +41,7 @@ export function TimelineRiver({ items }: TimelineRiverProps) {
               <div className="absolute left-6 top-0 h-full w-px bg-white/10" />
               <motion.div
                 style={reduceMotion ? undefined : { height: fill }}
-                className="absolute left-6 top-0 h-full w-px origin-top bg-[linear-gradient(180deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.82))]"
+                className="absolute left-6 top-0 h-full w-px origin-top bg-[linear-gradient(180deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.82))]"
               />
               {items.map((item, index) => (
                 <motion.div
@@ -58,7 +58,7 @@ export function TimelineRiver({ items }: TimelineRiverProps) {
                 </motion.div>
               ))}
               <motion.div
-                className="absolute left-[1.22rem] top-0 h-5 w-5 rounded-full border border-[#071013] bg-[linear-gradient(135deg,_rgba(216,180,95,0.98),_rgba(127,209,193,0.9))] shadow-[0_0_26px_rgba(216,180,95,0.35)]"
+                className="absolute left-[1.22rem] top-0 h-5 w-5 rounded-full border border-[#ffffff] bg-[linear-gradient(135deg,_rgba(141,84,255,0.98),_rgba(168,123,255,0.9))] shadow-[0_0_26px_rgba(141,84,255,0.35)]"
                 style={reduceMotion ? undefined : { top: marker }}
               />
             </div>
@@ -86,7 +86,7 @@ export function TimelineRiver({ items }: TimelineRiverProps) {
                     animate={{ scaleX: index === 0 ? 1 : 0.25 }}
                     transition={{ type: "spring", stiffness: 160, damping: 20 }}
                   >
-                    <div className="h-full origin-left rounded-full bg-[linear-gradient(90deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))]" />
+                    <div className="h-full origin-left rounded-full bg-[linear-gradient(90deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))]" />
                   </motion.div>
                 </div>
                 <div className="p-6 sm:p-7">

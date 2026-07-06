@@ -1,6 +1,6 @@
 import { SimplePage } from "@/components/simple-page";
 import { Surface } from "@/components/surface";
-import { pillars, draftNotice } from "@/lib/site";
+import { pillars, draftNotice, site } from "@/lib/site";
 
 export const metadata = {
   title: "About",
@@ -12,12 +12,12 @@ export default function AboutPage() {
       eyebrow="About"
       title="Built for trust, service, and youth leadership."
       description="A concise public profile for GEMA Malaysia."
-      primaryAction={{ label: "Join GEMA", href: "/join-us" }}
+      primaryAction={{ label: "Join GEMA", href: site.registerUrl }}
       secondaryAction={{ label: "View history", href: "/history" }}
     >
       <div className="grid gap-5 xl:grid-cols-[1.14fr_0.86fr]">
         <Surface className="relative overflow-hidden p-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.18),_transparent_30%),radial-gradient(circle_at_82%_18%,_rgba(127,209,193,0.16),_transparent_26%),linear-gradient(180deg,_rgba(255,255,255,0.02),_rgba(0,0,0,0.08))]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.18),_transparent_30%),radial-gradient(circle_at_82%_18%,_rgba(168,123,255,0.16),_transparent_26%),linear-gradient(180deg,_rgba(255,255,255,0.02),_rgba(0,0,0,0.08))]" />
           <div className="relative flex min-h-[640px] flex-col p-8 sm:p-10">
             <div className="flex items-start justify-between gap-4">
               <p className="text-[11px] uppercase tracking-[0.34em] text-white/45">Identity</p>
@@ -63,7 +63,7 @@ export default function AboutPage() {
                 ["Impact", "Activities and contact paths stay visible."],
               ].map(([title, detail], index) => (
                 <div key={title} className="grid grid-cols-[72px_1fr] gap-4 rounded-[24px] border border-white/10 bg-black/18 p-4">
-                  <div className="grid place-items-center rounded-[20px] bg-[linear-gradient(135deg,_rgba(216,180,95,0.92),_rgba(127,209,193,0.76))] text-sm font-semibold text-[#071013]">
+                  <div className="grid place-items-center rounded-[20px] bg-[linear-gradient(135deg,_rgba(141,84,255,0.92),_rgba(168,123,255,0.76))] text-sm font-semibold text-[#ffffff]">
                     0{index + 1}
                   </div>
                   <div className="self-center">

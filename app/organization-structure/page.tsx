@@ -17,7 +17,7 @@ export default function OrganizationStructurePage() {
     >
       <div className="grid gap-5 xl:grid-cols-[0.92fr_1.08fr]">
         <Surface className="relative overflow-hidden p-8">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.15),_transparent_28%),radial-gradient(circle_at_70%_20%,_rgba(127,209,193,0.12),_transparent_24%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.15),_transparent_28%),radial-gradient(circle_at_70%_20%,_rgba(168,123,255,0.12),_transparent_24%)]" />
           <div className="relative flex h-full flex-col">
             <p className="text-[11px] uppercase tracking-[0.34em] text-white/45">Public hierarchy</p>
             <p className="mt-4 max-w-sm font-display text-[clamp(2.3rem,4vw,4.2rem)] font-semibold leading-[0.92] tracking-[-0.085em] text-white">
@@ -46,7 +46,7 @@ export default function OrganizationStructurePage() {
           <div className="mt-6 grid gap-4">
             {cmsModules.map((module, index) => (
               <div key={module.title} className="grid grid-cols-[72px_1fr] gap-4 rounded-[26px] border border-white/10 bg-black/18 p-5">
-                <div className="grid place-items-center rounded-[20px] bg-[linear-gradient(135deg,_rgba(216,180,95,0.9),_rgba(127,209,193,0.76))] text-sm font-semibold text-[#071013]">
+                <div className="grid place-items-center rounded-[20px] bg-[linear-gradient(135deg,_rgba(141,84,255,0.9),_rgba(168,123,255,0.76))] text-sm font-semibold text-[#ffffff]">
                   0{index + 1}
                 </div>
                 <div>

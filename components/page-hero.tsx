@@ -25,7 +25,7 @@ export function PageHero({
 
   return (
     <section className="relative overflow-hidden border-b border-white/8">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.2),_transparent_32%),radial-gradient(circle_at_80%_20%,_rgba(127,209,193,0.15),_transparent_25%),linear-gradient(180deg,_rgba(10,13,14,1),_rgba(5,6,7,1))]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.34),_transparent_32%),radial-gradient(circle_at_80%_20%,_rgba(168,123,255,0.18),_transparent_25%),linear-gradient(180deg,_rgba(27,17,48,1),_rgba(11,7,22,1))]" />
       <div className="mx-auto grid w-full max-w-[1600px] gap-6 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:px-8 lg:py-24">
         <div className="max-w-4xl">
           {eyebrow ? (
@@ -63,7 +63,9 @@ export function PageHero({
               {primaryAction ? (
                 <MagneticLink
                   href={primaryAction.href}
-                  className="rounded-full bg-[linear-gradient(135deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))] px-6 py-3 text-sm font-semibold text-[#071013] transition duration-300 hover:translate-y-[-1px]"
+                  target={primaryAction.href.startsWith("http") ? "_blank" : undefined}
+                  rel={primaryAction.href.startsWith("http") ? "noreferrer" : undefined}
+                  className="rounded-full bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))] px-6 py-3 text-sm font-semibold text-[#ffffff] transition duration-300 hover:translate-y-[-1px]"
                 >
                   {primaryAction.label}
                 </MagneticLink>
@@ -111,6 +113,8 @@ export function PageHero({
                   <p className="text-[11px] uppercase tracking-[0.3em] text-white/42">Join route</p>
                   <MagneticLink
                     href={site.registerUrl}
+                    target="_blank"
+                    rel="noreferrer"
                     className="mt-3 inline-flex rounded-full bg-white/8 px-4 py-2 text-sm font-medium text-white/86 transition hover:bg-white/12"
                   >
                     Join GEMA

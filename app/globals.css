@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --accent: #d8b45f;
-  --accent-strong: #7fd1c1;
-  --page: #050607;
-  --page-soft: #0b1011;
-  --surface: rgba(255, 255, 255, 0.045);
-  --surface-strong: rgba(255, 255, 255, 0.085);
-  --text: rgba(255, 255, 255, 0.965);
-  --muted: rgba(255, 255, 255, 0.66);
-  --line: rgba(255, 255, 255, 0.1);
+  --accent: #8D54FF;
+  --accent-strong: #A87BFF;
+  --page: #ffffff;
+  --page-soft: #fafafa;
+  --surface: rgba(35, 22, 62, 0.72);
+  --surface-strong: rgba(52, 33, 92, 0.9);
+  --text: #1a1a1a;
+  --muted: rgba(26, 26, 26, 0.66);
+  --line: rgba(141, 84, 255, 0.16);
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
   scroll-padding-top: 6rem;
 }
 
@@ -33,10 +33,9 @@ body {
     Arial,
     sans-serif;
   background:
-    radial-gradient(circle at 10% 10%, rgba(216, 180, 95, 0.14), transparent 24%),
-    radial-gradient(circle at 82% 12%, rgba(127, 209, 193, 0.12), transparent 22%),
-    radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.05), transparent 28%),
-    linear-gradient(180deg, #0b1012 0%, #050607 42%, #040506 100%);
+    radial-gradient(circle at 10% 10%, rgba(141, 84, 255, 0.16), transparent 24%),
+    radial-gradient(circle at 82% 12%, rgba(168, 123, 255, 0.12), transparent 22%),
+    linear-gradient(180deg, #ffffff 0%, #fafafa 46%, #f6f3ff 100%);
   color: var(--text);
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
@@ -105,13 +104,13 @@ a {
 
 .glass-surface {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0.032)),
-    rgba(255, 255, 255, 0.038);
+    linear-gradient(180deg, rgba(35, 22, 62, 0.84), rgba(18, 12, 32, 0.78)),
+    rgba(35, 22, 62, 0.72);
   border: 1px solid var(--line);
   backdrop-filter: blur(24px);
   box-shadow:
-    0 24px 90px rgba(0, 0, 0, 0.28),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    0 24px 90px rgba(91, 61, 150, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .section-spacing {
@@ -130,7 +129,7 @@ a {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 50% -10%, rgba(255, 255, 255, 0.06), transparent 32%),
-    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.16));
+    radial-gradient(circle at 50% -10%, rgba(141, 84, 255, 0.08), transparent 32%),
+    linear-gradient(180deg, transparent, rgba(141, 84, 255, 0.06));
   z-index: -2;
 }

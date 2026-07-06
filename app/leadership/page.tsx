@@ -17,7 +17,7 @@ export default function LeadershipPage() {
     >
       <div className="grid gap-5 xl:grid-cols-[0.84fr_1.16fr]">
         <Surface className="relative overflow-hidden p-8">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.15),_transparent_28%),radial-gradient(circle_at_70%_20%,_rgba(127,209,193,0.12),_transparent_24%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.15),_transparent_28%),radial-gradient(circle_at_70%_20%,_rgba(168,123,255,0.12),_transparent_24%)]" />
           <div className="relative flex h-full flex-col">
             <p className="text-[11px] uppercase tracking-[0.34em] text-white/45">Roster logic</p>
             <p className="mt-4 max-w-sm font-display text-[clamp(2.4rem,4vw,4.4rem)] font-semibold leading-[0.92] tracking-[-0.085em] text-white">

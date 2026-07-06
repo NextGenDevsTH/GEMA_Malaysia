@@ -49,7 +49,7 @@ const navGroups: NavGroup[] = [
     kicker: "Action",
     links: [
       { href: "/activities", label: "Activities", description: "Programs, events, and service work" },
-      { href: "/join-us", label: "Join Us", description: "Volunteer and membership pathway" },
+      { href: site.registerUrl, label: "Join Us", description: "Volunteer and membership pathway" },
     ],
   },
   {
@@ -77,7 +77,7 @@ export function SiteHeader() {
     >
       <div className="glass-surface mx-auto flex w-full max-w-[1440px] items-center justify-between gap-3 rounded-full px-3 py-2.5 shadow-[0_18px_70px_rgba(0,0,0,0.32)] ring-1 ring-white/8 sm:gap-4 sm:px-4">
         <Link href="/" className="group flex min-w-0 items-center gap-3 rounded-full pr-2 text-white transition duration-300 hover:bg-white/[0.03]">
-          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[linear-gradient(135deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.82))] text-sm font-semibold tracking-[0.28em] text-[#071013] ring-1 ring-white/10 transition duration-300 group-hover:scale-[1.03]">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.82))] text-sm font-semibold tracking-[0.28em] text-[#ffffff] ring-1 ring-white/10 transition duration-300 group-hover:scale-[1.03]">
             G
           </span>
           <span className="hidden min-w-0 flex-col sm:flex">
@@ -150,7 +150,7 @@ export function SiteHeader() {
                 </Link>
 
                 <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[22rem] -translate-x-1/2 pt-3 opacity-0 blur-sm transition duration-200 group-hover/nav:pointer-events-auto group-hover/nav:opacity-100 group-hover/nav:blur-0 group-focus-within/nav:pointer-events-auto group-focus-within/nav:opacity-100 group-focus-within/nav:blur-0">
-                  <div className="overflow-hidden rounded-[24px] border border-white/10 bg-[#070908]/95 p-2 shadow-[0_24px_80px_rgba(0,0,0,0.42)] backdrop-blur-2xl">
+                  <div className="overflow-hidden rounded-[24px] border border-white/10 bg-[#1b1130]/95 p-2 shadow-[0_24px_80px_rgba(0,0,0,0.42)] backdrop-blur-2xl">
                     <div className="border-b border-white/8 px-4 py-3">
                       <p className="text-[10px] uppercase tracking-[0.32em] text-white/36">{group.kicker}</p>
                       <p className="mt-1 text-sm text-white/76">{group.label}</p>
@@ -160,6 +160,8 @@ export function SiteHeader() {
                         <Link
                           key={link.href}
                           href={link.href}
+                          target={link.href.startsWith("http") ? "_blank" : undefined}
+                          rel={link.href.startsWith("http") ? "noreferrer" : undefined}
                           className={`rounded-[18px] px-3 py-3 transition duration-200 ${
                             isActive(pathname, link.href)
                               ? "bg-white/9 text-white"
@@ -181,15 +183,20 @@ export function SiteHeader() {
         </motion.nav>
 
         <div className="hidden items-center gap-3 sm:flex">
+          <span className="rounded-full border border-[color:var(--line)] bg-white/80 px-3 py-2 text-xs font-semibold tracking-[0.18em] text-[#5f35b5]">
+            EN | BM
+          </span>
           <MagneticLink
             href={site.registerUrl}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-full border border-white/10 bg-white/6 px-4 py-2 text-sm text-white/82 transition duration-300 hover:border-white/18 hover:bg-white/10"
           >
             Join Us
           </MagneticLink>
           <MagneticLink
             href="/contact"
-            className="rounded-full bg-[linear-gradient(135deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))] px-4 py-2 text-sm font-semibold text-[#071013] transition duration-300 hover:translate-y-[-1px]"
+            className="rounded-full bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))] px-4 py-2 text-sm font-semibold text-[#ffffff] transition duration-300 hover:translate-y-[-1px]"
           >
             Contact
           </MagneticLink>
@@ -228,6 +235,8 @@ export function SiteHeader() {
                       <Link
                         key={link.href}
                         href={link.href}
+                        target={link.href.startsWith("http") ? "_blank" : undefined}
+                        rel={link.href.startsWith("http") ? "noreferrer" : undefined}
                         className={`rounded-2xl px-3 py-2.5 text-sm transition hover:bg-white/8 hover:text-white ${
                           isActive(pathname, link.href) ? "bg-white/9 text-white" : "text-white/62"
                         }`}
@@ -242,7 +251,9 @@ export function SiteHeader() {
             <div className="mt-3 grid gap-2">
               <Link
                 href={site.registerUrl}
-                className="rounded-2xl bg-[linear-gradient(135deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))] px-4 py-3 text-center text-sm font-semibold text-[#071013]"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-2xl bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))] px-4 py-3 text-center text-sm font-semibold text-[#ffffff]"
               >
                 Join Us
               </Link>

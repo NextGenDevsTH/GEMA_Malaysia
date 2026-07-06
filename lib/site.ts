@@ -2,7 +2,7 @@ export const site = {
   name: "Pertubuhan Pemuda GEMA Malaysia",
   shortName: "GEMA",
   officialSiteUrl: "https://www.sigmagema.com",
-  registerUrl: "/join-us",
+  registerUrl: "https://www.sigmagema.com/register",
   sourceNote:
     "Publicly verified information is limited, so this site is structured to expand cleanly as approved copy and assets are released.",
   brandLine: "Hope, leadership, and action for Malaysia's youth.",

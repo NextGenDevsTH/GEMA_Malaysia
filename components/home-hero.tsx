@@ -37,23 +37,23 @@ export function HomeHero({ heroImage, supportingImages = [] }: HomeHeroProps) {
 
   return (
     <section ref={heroRef} className="relative overflow-hidden border-b border-white/8">
-      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_12%_18%,_rgba(216,180,95,0.22),_transparent_24%),radial-gradient(circle_at_82%_14%,_rgba(127,209,193,0.18),_transparent_22%),radial-gradient(circle_at_50%_100%,_rgba(255,255,255,0.08),_transparent_26%),linear-gradient(180deg,_rgba(10,13,14,1),_rgba(5,6,7,1)_78%)]" />
+      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_12%_18%,_rgba(141,84,255,0.36),_transparent_24%),radial-gradient(circle_at_82%_14%,_rgba(168,123,255,0.22),_transparent_22%),radial-gradient(circle_at_50%_100%,_rgba(255,255,255,0.08),_transparent_26%),linear-gradient(180deg,_rgba(27,17,48,1),_rgba(11,7,22,1)_78%)]" />
       <div className="absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-white/18 to-transparent" />
       <motion.div
-        className="absolute inset-x-0 top-0 z-10 h-[2px] origin-left bg-[linear-gradient(90deg,transparent,_rgba(216,180,95,0.95),_rgba(127,209,193,0.9),transparent)]"
+        className="absolute inset-x-0 top-0 z-10 h-[2px] origin-left bg-[linear-gradient(90deg,transparent,_rgba(141,84,255,0.95),_rgba(168,123,255,0.9),transparent)]"
         style={{ scaleX: progressWidth }}
       />
       <motion.div
         aria-hidden
         animate={reduceMotion ? undefined : { y: [0, -14, 0], x: [0, 10, 0] }}
         transition={reduceMotion ? undefined : { duration: 14, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-        className="pointer-events-none absolute left-[8%] top-[15%] h-40 w-40 rounded-full bg-[radial-gradient(circle,_rgba(216,180,95,0.24),_rgba(216,180,95,0)_70%)] blur-2xl"
+        className="pointer-events-none absolute left-[8%] top-[15%] h-40 w-40 rounded-full bg-[radial-gradient(circle,_rgba(141,84,255,0.24),_rgba(141,84,255,0)_70%)] blur-2xl"
       />
       <motion.div
         aria-hidden
         animate={reduceMotion ? undefined : { y: [0, 18, 0], x: [0, -12, 0] }}
         transition={reduceMotion ? undefined : { duration: 18, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-        className="pointer-events-none absolute right-[10%] top-[18%] h-48 w-48 rounded-full bg-[radial-gradient(circle,_rgba(127,209,193,0.18),_rgba(127,209,193,0)_70%)] blur-2xl"
+        className="pointer-events-none absolute right-[10%] top-[18%] h-48 w-48 rounded-full bg-[radial-gradient(circle,_rgba(168,123,255,0.18),_rgba(168,123,255,0)_70%)] blur-2xl"
       />
 
       <div className="mx-auto grid min-h-[calc(100svh-88px)] w-full max-w-[1600px] gap-8 px-4 py-6 sm:px-6 lg:grid-cols-[0.98fr_1.02fr] lg:items-end lg:px-8 lg:py-8">
@@ -99,7 +99,9 @@ export function HomeHero({ heroImage, supportingImages = [] }: HomeHeroProps) {
             >
               <MagneticLink
                 href={site.registerUrl}
-                className="rounded-full bg-[linear-gradient(135deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))] px-6 py-3 text-sm font-semibold text-[#071013] transition duration-300 hover:translate-y-[-1px]"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))] px-6 py-3 text-sm font-semibold text-[#ffffff] transition duration-300 hover:translate-y-[-1px]"
               >
                 Join GEMA
               </MagneticLink>
@@ -172,7 +174,7 @@ export function HomeHero({ heroImage, supportingImages = [] }: HomeHeroProps) {
               />
             </motion.div>
 
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.06),_rgba(0,0,0,0.48)_60%,_rgba(0,0,0,0.8)),radial-gradient(circle_at_50%_0%,_rgba(216,180,95,0.2),_transparent_36%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.06),_rgba(0,0,0,0.48)_60%,_rgba(0,0,0,0.8)),radial-gradient(circle_at_50%_0%,_rgba(141,84,255,0.2),_transparent_36%)]" />
 
             <motion.div
               initial={{ opacity: 0, y: 18 }}
@@ -221,7 +223,7 @@ export function HomeHero({ heroImage, supportingImages = [] }: HomeHeroProps) {
               aria-hidden
               animate={reduceMotion ? undefined : { y: [0, -8, 0] }}
               transition={reduceMotion ? undefined : { duration: 12, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-              className="pointer-events-none absolute right-6 top-6 h-24 w-24 rounded-full bg-[radial-gradient(circle,_rgba(216,180,95,0.18),_rgba(216,180,95,0)_70%)] blur-xl"
+              className="pointer-events-none absolute right-6 top-6 h-24 w-24 rounded-full bg-[radial-gradient(circle,_rgba(141,84,255,0.18),_rgba(141,84,255,0)_70%)] blur-xl"
             />
           </motion.div>
         </motion.div>

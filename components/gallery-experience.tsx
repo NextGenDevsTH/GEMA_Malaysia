@@ -116,7 +116,7 @@ export function GalleryExperience({ assets }: GalleryExperienceProps) {
               />
             ) : null}
           </div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.24),_transparent_34%),radial-gradient(circle_at_82%_18%,_rgba(127,209,193,0.18),_transparent_28%),linear-gradient(180deg,_rgba(0,0,0,0.02),_rgba(0,0,0,0.72))]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.24),_transparent_34%),radial-gradient(circle_at_82%_18%,_rgba(168,123,255,0.18),_transparent_28%),linear-gradient(180deg,_rgba(0,0,0,0.02),_rgba(0,0,0,0.72))]" />
           <div className="relative aspect-[16/9] min-h-[28rem] lg:min-h-[38rem]">
             {leadAsset ? (
               <Image
@@ -176,7 +176,7 @@ export function GalleryExperience({ assets }: GalleryExperienceProps) {
           transition={{ type: "spring", stiffness: 180, damping: 22 }}
           className="group relative overflow-hidden rounded-[34px] border border-white/10 bg-white/6 text-left shadow-soft"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.28),_transparent_42%),linear-gradient(180deg,_rgba(0,0,0,0.05),_rgba(0,0,0,0.45))]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.28),_transparent_42%),linear-gradient(180deg,_rgba(0,0,0,0.05),_rgba(0,0,0,0.45))]" />
           {featured[0] ? (
             <motion.div layoutId={`gallery-${featured[0].relativePath}`} className="relative aspect-[4/5] min-h-[420px] lg:aspect-auto lg:min-h-[760px]">
               <Image

@@ -29,13 +29,13 @@ export default function MediaPage() {
                     {card.title}
                   </h3>
                   <p className="mt-5 max-w-lg text-sm leading-7 text-white/64">{card.description}</p>
-                  <div className="mt-8 inline-flex rounded-full bg-[linear-gradient(135deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))] px-5 py-3 text-sm font-semibold text-[#071013] transition duration-300 group-hover:translate-y-[-1px]">
+                  <div className="mt-8 inline-flex rounded-full bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))] px-5 py-3 text-sm font-semibold text-[#ffffff] transition duration-300 group-hover:translate-y-[-1px]">
                     Open archive
                   </div>
                 </div>
 
                 <div className="relative min-h-[240px] overflow-hidden border-t border-white/8 lg:border-l lg:border-t-0">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.2),_transparent_28%),radial-gradient(circle_at_80%_20%,_rgba(127,209,193,0.16),_transparent_24%),linear-gradient(135deg,_rgba(255,255,255,0.06),_rgba(255,255,255,0.02))]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.2),_transparent_28%),radial-gradient(circle_at_80%_20%,_rgba(168,123,255,0.16),_transparent_24%),linear-gradient(135deg,_rgba(255,255,255,0.06),_rgba(255,255,255,0.02))]" />
                   <div className="relative flex h-full flex-col justify-between p-8">
                     <p className="text-[11px] uppercase tracking-[0.34em] text-white/45">Archive route</p>
                     <div className="max-w-xl">

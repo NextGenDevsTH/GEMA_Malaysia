@@ -1,5 +1,6 @@
 import { SimplePage } from "@/components/simple-page";
 import { Surface } from "@/components/surface";
+import { site } from "@/lib/site";
 
 export const metadata = {
   title: "Vision",
@@ -12,11 +13,11 @@ export default function VisionPage() {
       title="A generation that leads with integrity."
       description="A concise vision for GEMA."
       primaryAction={{ label: "Read mission", href: "/mission" }}
-      secondaryAction={{ label: "Join GEMA", href: "/join-us" }}
+      secondaryAction={{ label: "Join GEMA", href: site.registerUrl }}
     >
       <div className="grid gap-5 xl:grid-cols-[1.1fr_0.9fr]">
         <Surface className="relative overflow-hidden p-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,_rgba(216,180,95,0.14),_transparent_28%),radial-gradient(circle_at_82%_14%,_rgba(127,209,193,0.18),_transparent_24%),linear-gradient(180deg,_rgba(255,255,255,0.02),_rgba(0,0,0,0.08))]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,_rgba(141,84,255,0.14),_transparent_28%),radial-gradient(circle_at_82%_14%,_rgba(168,123,255,0.18),_transparent_24%),linear-gradient(180deg,_rgba(255,255,255,0.02),_rgba(0,0,0,0.08))]" />
           <div className="relative flex min-h-[620px] flex-col p-8 sm:p-10">
             <p className="text-[11px] uppercase tracking-[0.34em] text-white/45">Vision statement</p>
             <p className="mt-5 max-w-3xl font-display text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[0.9] tracking-[-0.085em] text-white">
@@ -61,7 +62,7 @@ export default function VisionPage() {
                 ["Momentum", "The system should feel alive without becoming noisy."],
               ].map(([label, value], index) => (
                 <div key={label} className="grid grid-cols-[68px_1fr] gap-4 rounded-[24px] border border-white/10 bg-black/18 p-4">
-                  <div className="grid place-items-center rounded-[20px] bg-[linear-gradient(135deg,_rgba(216,180,95,0.92),_rgba(127,209,193,0.76))] text-sm font-semibold text-[#071013]">
+                  <div className="grid place-items-center rounded-[20px] bg-[linear-gradient(135deg,_rgba(141,84,255,0.92),_rgba(168,123,255,0.76))] text-sm font-semibold text-[#ffffff]">
                     0{index + 1}
                   </div>
                   <div className="self-center">

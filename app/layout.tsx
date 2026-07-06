@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  themeColor: "#050607",
+  themeColor: "#8D54FF",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="ms" suppressHydrationWarning>
-      <body className="bg-page text-white">
+      <body className="bg-page text-[color:var(--text)]">
         <div className="grain min-h-dvh">
           <ScrollProgress />
           <SiteHeader />

@@ -11,7 +11,7 @@ export function Chip({ children, active }: ChipProps) {
       className={[
         "inline-flex items-center rounded-full px-3.5 py-1.5 text-[11px] font-medium tracking-[0.08em] transition",
         active
-          ? "bg-[linear-gradient(135deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))] text-[#071013] shadow-[0_10px_24px_rgba(216,180,95,0.18)]"
+          ? "bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))] text-[#ffffff] shadow-[0_10px_24px_rgba(141,84,255,0.18)]"
           : "border border-white/10 bg-white/5 text-white/74",
       ].join(" ")}
     >

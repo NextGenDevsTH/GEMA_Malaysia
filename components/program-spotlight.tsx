@@ -118,7 +118,7 @@ function SpotlightItem({
       transition={{ type: "spring", stiffness: 220, damping: 22 }}
       className={[
         "group border-b border-white/8 px-5 py-5 text-left transition last:border-b-0 sm:px-6",
-        isActive ? "bg-[linear-gradient(135deg,_rgba(216,180,95,0.1),_rgba(255,255,255,0.03))]" : "bg-transparent hover:bg-white/4",
+        isActive ? "bg-[linear-gradient(135deg,_rgba(141,84,255,0.1),_rgba(255,255,255,0.03))]" : "bg-transparent hover:bg-white/4",
       ].join(" ")}
     >
       <div className="flex items-start justify-between gap-4">
@@ -139,7 +139,7 @@ function SpotlightItem({
           initial={false}
           animate={{ scaleX: isActive ? 1 : 0.22 }}
           transition={{ type: "spring", stiffness: 180, damping: 20 }}
-          className="h-px origin-left bg-[linear-gradient(90deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))]"
+          className="h-px origin-left bg-[linear-gradient(90deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))]"
         />
       </div>
     </motion.button>

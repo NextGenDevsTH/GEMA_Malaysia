@@ -18,7 +18,7 @@ export function MetricStrip({ items }: MetricStripProps) {
             <div key={item.label} className="relative p-6 sm:p-7">
               <div className="flex items-start justify-between gap-4">
                 <p className="text-[11px] uppercase tracking-[0.34em] text-white/44">{item.label}</p>
-                <span className="h-2 w-2 rounded-full bg-[color:var(--accent-strong)] shadow-[0_0_18px_rgba(127,209,193,0.55)]" />
+                <span className="h-2 w-2 rounded-full bg-[color:var(--accent-strong)] shadow-[0_0_18px_rgba(168,123,255,0.55)]" />
               </div>
               <p className="mt-5 text-[clamp(2.4rem,4vw,3.5rem)] font-semibold tracking-[-0.08em] text-white">
                 <MetricValue value={item.value} />

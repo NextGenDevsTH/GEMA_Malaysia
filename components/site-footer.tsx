@@ -29,7 +29,7 @@ export function SiteFooter() {
                 href={site.registerUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full bg-[linear-gradient(135deg,_rgba(216,180,95,0.95),_rgba(127,209,193,0.78))] px-5 py-3 text-sm font-semibold text-[#071013]"
+                className="rounded-full bg-[linear-gradient(135deg,_rgba(141,84,255,0.95),_rgba(168,123,255,0.78))] px-5 py-3 text-sm font-semibold text-[#ffffff]"
               >
                 Join GEMA
               </MagneticLink>

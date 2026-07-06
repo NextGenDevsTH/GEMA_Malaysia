@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { activities } from "@/lib/site";
+import { activities, site } from "@/lib/site";
 import { PageHero } from "@/components/page-hero";
 import { Surface } from "@/components/surface";
 
@@ -29,13 +29,13 @@ export default async function ActivityDetailPage({ params }: { params: Promise<{
         eyebrow={activity.category}
         title={activity.title}
         description={activity.summary}
-        primaryAction={{ label: "Join GEMA", href: "/join-us" }}
+        primaryAction={{ label: "Join GEMA", href: site.registerUrl }}
         secondaryAction={{ label: "Back to activities", href: "/activities" }}
       />
 
       <div className="mx-auto grid w-full max-w-[1440px] gap-5 px-4 py-12 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:px-8">
         <Surface className="relative overflow-hidden p-8">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.16),_transparent_28%),radial-gradient(circle_at_80%_20%,_rgba(127,209,193,0.12),_transparent_24%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.16),_transparent_28%),radial-gradient(circle_at_80%_20%,_rgba(168,123,255,0.12),_transparent_24%)]" />
           <div className="relative flex h-full flex-col">
             <p className="text-[11px] uppercase tracking-[0.3em] text-white/45">Program detail</p>
             <div className="mt-6 grid gap-4">

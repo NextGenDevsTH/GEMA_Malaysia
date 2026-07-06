@@ -189,7 +189,7 @@ export function GalleryExhibition({ assets }: GalleryExhibitionProps) {
               transition={{ duration: shouldReduceMotion ? 0 : 0.25 }}
               onClick={closeViewer}
             >
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(216,180,95,0.12),_transparent_40%),linear-gradient(180deg,_rgba(255,255,255,0.04),_transparent_38%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(141,84,255,0.12),_transparent_40%),linear-gradient(180deg,_rgba(255,255,255,0.04),_transparent_38%)]" />
 
               <motion.div
                 className="relative grid h-[100dvh] grid-rows-[auto_minmax(0,1fr)_auto] px-4 py-4 sm:px-6 lg:px-8"
@@ -221,7 +221,7 @@ export function GalleryExhibition({ assets }: GalleryExhibitionProps) {
                   <button
                     type="button"
                     onClick={closeViewer}
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-5 py-2 text-sm text-white/82 outline-none transition hover:bg-white/10 focus-visible:border-[color:var(--accent)] focus-visible:shadow-[0_0_0_4px_rgba(216,180,95,0.12)]"
+                    className="rounded-full border border-white/10 bg-white/[0.04] px-5 py-2 text-sm text-white/82 outline-none transition hover:bg-white/10 focus-visible:border-[color:var(--accent)] focus-visible:shadow-[0_0_0_4px_rgba(141,84,255,0.12)]"
                   >
                     Close
                   </button>
@@ -308,11 +308,11 @@ export function GalleryExhibition({ assets }: GalleryExhibitionProps) {
     >
       <div className="pointer-events-none absolute inset-0">
         <motion.div
-          className="absolute left-1/2 top-0 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(216,180,95,0.16),_transparent_68%)] blur-3xl"
+          className="absolute left-1/2 top-0 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,_rgba(141,84,255,0.16),_transparent_68%)] blur-3xl"
           animate={shouldReduceMotion ? undefined : { x: pointer.x * 24, y: pointer.y * 18 }}
           transition={{ type: "spring", stiffness: 60, damping: 24 }}
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(8,8,7,0.16),_#080807_76%),radial-gradient(circle_at_85%_12%,_rgba(127,209,193,0.1),_transparent_28%),radial-gradient(circle_at_10%_30%,_rgba(216,180,95,0.08),_transparent_26%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(8,8,7,0.16),_#080807_76%),radial-gradient(circle_at_85%_12%,_rgba(168,123,255,0.1),_transparent_28%),radial-gradient(circle_at_10%_30%,_rgba(141,84,255,0.08),_transparent_26%)]" />
         <div className="absolute inset-0 opacity-[0.035] [background-image:linear-gradient(rgba(255,255,255,0.9)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.9)_1px,transparent_1px)] [background-size:48px_48px]" />
       </div>
 
@@ -388,7 +388,7 @@ export function GalleryExhibition({ assets }: GalleryExhibitionProps) {
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Search the archive"
-              className="h-11 w-full rounded-full border border-white/10 bg-white/[0.035] px-5 pr-16 text-sm text-white outline-none transition placeholder:text-white/34 focus:border-[color:var(--accent)] focus:bg-white/[0.055] focus:shadow-[0_0_0_4px_rgba(216,180,95,0.1)]"
+              className="h-11 w-full rounded-full border border-white/10 bg-white/[0.035] px-5 pr-16 text-sm text-white outline-none transition placeholder:text-white/34 focus:border-[color:var(--accent)] focus:bg-white/[0.055] focus:shadow-[0_0_0_4px_rgba(141,84,255,0.1)]"
             />
             <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[10px] uppercase text-white/34">
               {formatCount(filtered.length)}
@@ -425,7 +425,7 @@ export function GalleryExhibition({ assets }: GalleryExhibitionProps) {
                     <motion.div
                       className={[
                         "relative overflow-hidden border border-white/10 bg-[#11110f] shadow-[0_24px_80px_rgba(0,0,0,0.24)] transition duration-500",
-                        "group-hover:border-white/22 group-focus-visible:border-[color:var(--accent)] group-focus-visible:shadow-[0_0_0_4px_rgba(216,180,95,0.12)]",
+                        "group-hover:border-white/22 group-focus-visible:border-[color:var(--accent)] group-focus-visible:shadow-[0_0_0_4px_rgba(141,84,255,0.12)]",
                         item.image,
                       ].join(" ")}
                       whileHover={shouldReduceMotion ? undefined : { y: -6 }}

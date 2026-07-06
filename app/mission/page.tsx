@@ -17,7 +17,7 @@ export default function MissionPage() {
     >
       <div className="grid gap-5 xl:grid-cols-[1.12fr_0.88fr]">
         <Surface className="relative overflow-hidden p-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(216,180,95,0.17),_transparent_30%),radial-gradient(circle_at_82%_18%,_rgba(127,209,193,0.14),_transparent_26%),linear-gradient(180deg,_rgba(255,255,255,0.02),_rgba(0,0,0,0.1))]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(141,84,255,0.17),_transparent_30%),radial-gradient(circle_at_82%_18%,_rgba(168,123,255,0.14),_transparent_26%),linear-gradient(180deg,_rgba(255,255,255,0.02),_rgba(0,0,0,0.1))]" />
           <div className="relative flex min-h-[640px] flex-col p-8 sm:p-10">
             <p className="text-[11px] uppercase tracking-[0.34em] text-white/45">Mission</p>
             <p className="mt-5 max-w-3xl font-display text-[clamp(2.7rem,5vw,4.9rem)] font-semibold leading-[0.9] tracking-[-0.085em] text-white">
