@@ -74,6 +74,27 @@ export function SiteHeader() {
     setMobileOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const scrollY = window.scrollY;
+    const { body } = document;
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.overflow = "hidden";
+
+    return () => {
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      body.style.overflow = "";
+      window.scrollTo(0, scrollY);
+    };
+  }, [mobileOpen]);
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -16 }}
@@ -234,7 +255,7 @@ export function SiteHeader() {
             />
             <motion.nav
               id="mobile-navigation"
-              className="fixed inset-x-3 top-[5.75rem] z-[60] max-h-[calc(100dvh-7rem)] overflow-y-auto rounded-[28px] border border-white/10 bg-[#1b1130]/95 p-3 text-white shadow-[0_24px_80px_rgba(20,13,38,0.28)] backdrop-blur-2xl xl:hidden"
+              className="fixed inset-x-3 top-[5.75rem] z-[60] max-h-[calc(100dvh-7rem)] touch-pan-y overflow-y-auto overscroll-contain rounded-[28px] border border-white/10 bg-[#1b1130]/95 p-3 text-white shadow-[0_24px_80px_rgba(20,13,38,0.28)] backdrop-blur-2xl xl:hidden"
               initial={{ opacity: 0, y: -12, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.98 }}

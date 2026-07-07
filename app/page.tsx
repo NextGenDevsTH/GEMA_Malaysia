@@ -162,7 +162,7 @@ export default async function HomePage() {
         <div className="grid gap-5">
           <SectionHeading title="Empowering Youth. Inspiring Change." titleClassName="text-[#1a1a1a]" />
           <Surface className="overflow-hidden p-0">
-            <section className="relative h-screen w-full overflow-clip">
+            <section className="relative min-h-[28rem] h-[70vh] w-full overflow-clip sm:h-[80vh] lg:h-screen">
               <Image
                 src={programHero}
                 alt="Programs hero"
@@ -173,9 +173,9 @@ export default async function HomePage() {
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08),rgba(0,0,0,0.2)_24%,rgba(0,0,0,0.45)),radial-gradient(circle_at_18%_28%,rgba(0,0,0,0.32),transparent_46%)]" />
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.14),transparent_30%)]" />
-              <div className="absolute inset-0 flex items-start justify-start px-6 pt-[clamp(6.5rem,34vh,20rem)] sm:px-10 lg:px-16 xl:px-20">
+              <div className="absolute inset-0 flex items-start justify-start px-5 pt-[clamp(4rem,22vh,20rem)] sm:px-10 sm:pt-[clamp(5.5rem,30vh,20rem)] lg:px-16 lg:pt-[clamp(6.5rem,34vh,20rem)] xl:px-20">
                 <Fall>
-                  <h3 className="font-display whitespace-nowrap text-left text-[clamp(2.6rem,5.6vw,7.25rem)] font-medium leading-none tracking-[-0.11em] text-white" style={{ textShadow: "0 2px 24px rgba(0,0,0,0.18)" }}>
+                  <h3 className="font-display max-w-full break-words text-left text-[clamp(1.9rem,9vw,7.25rem)] font-medium leading-[1.05] tracking-[-0.05em] text-white sm:leading-[1] sm:tracking-[-0.08em] lg:whitespace-nowrap lg:leading-none lg:tracking-[-0.11em]" style={{ textShadow: "0 2px 24px rgba(0,0,0,0.18)" }}>
                     تمكين الشباب. إلهام التغيير.
                   </h3>
                 </Fall>

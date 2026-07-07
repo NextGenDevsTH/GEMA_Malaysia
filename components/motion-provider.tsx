@@ -25,6 +25,7 @@ export function MotionProvider({ children }: MotionProviderProps) {
       lerp: 0.08,
       smoothWheel: true,
       syncTouch: true,
+      prevent: (node) => !!node.closest("#mobile-navigation"),
     });
 
     let frame = 0;
